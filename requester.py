@@ -1,6 +1,7 @@
 import discord
 import json
 import time
+import os
 
 client = discord.Client()
 
@@ -26,4 +27,4 @@ async def on_message(message):
         with open('sentfile.json', 'w', encoding='UTF8') as w:
             w.write(rep)
 
-client.run()
+client.run(os.environ['token'])
