@@ -1,5 +1,6 @@
 import discord
 import json
+import os
 
 client = discord.Client()
 print('discord-based server')
@@ -23,4 +24,4 @@ async def on_message(message):
             await message.channel.send('+sen|' + sp[1] + '|' + str(r))
         w.close()
 
-client.run()
+client.run(os.environ['token'])
