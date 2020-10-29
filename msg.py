@@ -1,6 +1,7 @@
 import discord
 import json
 import time
+import os
 
 client = discord.Client()
 print('discord-based server')
@@ -11,4 +12,4 @@ async def on_message(message):
         await message.channel.send('f')
         time.sleep(1)
 
-client.run('NjI1MTI5Mjg4OTM2NzE4MzM2.XYbDBA.LRorQoNxEeAOqkgN0-nDlOQInAc')
+client.run(os.environ['token'])
